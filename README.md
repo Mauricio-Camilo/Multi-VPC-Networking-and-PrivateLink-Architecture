@@ -38,9 +38,8 @@ This allows the shared service to be consumed privately through AWS's internal n
 
 The following diagram illustrates the high-level architecture of the multi-VPC PrivateLink solution, highlighting how the Shared Services VPC exposes its internal application and how the Payments and Analytics VPCs securely consume the service through Interface Endpoints.
 
-<p align="center">
-<img src="./images/architecture.png" width="1100">
-</p>
+  ![Diagram](./images/project-architecture.png)
+  
 
 # Implementation
 
