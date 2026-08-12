@@ -106,9 +106,7 @@ The load balancer is configured as internal rather than internet-facing because 
 
 The NLB also provides the Layer 4 connectivity required by the PrivateLink Endpoint Service architecture.
 
-<p align="center">
-<img src="./images/nlb.png" width="900">
-</p>
+  ![Diagram](./images/nlb.png)
 
 ## VPC Endpoint Service
 
@@ -120,9 +118,6 @@ The Endpoint Service generates a service name that consumers use when creating t
 
 The provider can also control which consumers are allowed to establish connections to the service.
 
-<p align="center">
-<img src="./images/endpoint-service.png" width="900">
-</p>
 
 ## Interface Endpoints
 
@@ -148,6 +143,9 @@ Instead, it receives access to the specific service published through PrivateLin
 
 This provides service-level connectivity while preserving isolation between the underlying networks.
 
+  ![Diagram](./images/private-link.png)
+
+
 ## Validation
 
 The architecture was validated directly from an EC2 instance inside the Payments VPC.
@@ -158,9 +156,7 @@ The connection fails.
 
 The same service can then be accessed through the Interface Endpoint, and the request successfully returns the Shared Services application.
 
-<p align="center">
-<img src="./images/private-link-test.png" width="900">
-</p>
+  ![Diagram](./images/endpoint-connection.png)
 
 This demonstrates that the application remains inaccessible through direct cross-VPC connectivity while still being available to authorized consumers through AWS PrivateLink.
 
